@@ -24,7 +24,7 @@ export function HeroContentLeft({keyValue} : {keyValue : string}) {
         console.error("Error fetching from S3");
       }
     } catch (error) {
-      console.error("Error getting URL");
+      console.error(error);
     }
   }
   return (

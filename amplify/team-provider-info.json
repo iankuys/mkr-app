@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mkrapp-dev-40634-authRole",
+      "UnauthRoleArn": "arn:aws:iam::211125544639:role/amplify-mkrapp-dev-40634-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::211125544639:role/amplify-mkrapp-dev-40634-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-mkrapp-dev-40634-deployment",
+      "UnauthRoleName": "amplify-mkrapp-dev-40634-unauthRole",
+      "StackName": "amplify-mkrapp-dev-40634",
+      "StackId": "arn:aws:cloudformation:us-west-1:211125544639:stack/amplify-mkrapp-dev-40634/e9871920-fde4-11ee-adc7-06ea94e1a909",
+      "AmplifyAppId": "d3nr1u9ycqcx48"
+    },
+    "categories": {
+      "auth": {
+        "mkrapp": {}
+      },
+      "storage": {
+        "s3mkrappstorage6f81b7d4": {}
+      },
+      "function": {
+        "S3Triggerec9fe840": {
+          "deploymentBucketName": "amplify-mkrapp-dev-40634-deployment",
+          "s3Key": "amplify-builds/S3Triggerec9fe840-477072314f7451707a46-build.zip"
+        }
+      },
+      "api": {
+        "sendform": {}
+      }
+    }
+  }
+}

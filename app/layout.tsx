@@ -2,6 +2,10 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from '../src/amplifyconfiguration.json';
+
+Amplify.configure(amplifyconfig);
 
 export const metadata = {
   title: 'Mantine Next.js template',

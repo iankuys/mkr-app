@@ -5,8 +5,8 @@ import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeTo
 import { Container, Grid, rem } from '@mantine/core';
 
 import { HeaderMenu } from '@/components/Home/HeaderMenu';
-import ContentCard from '@/components/Home/ContentCard';
 import { FooterLinks } from '@/components/Home/FooterBar';
+import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
 import { CardsCarousel } from '@/components/Home/Carousel';
 import { carouselkeys, productsDescription } from '@/components/data';
@@ -26,7 +26,7 @@ export default function HomePage() {
         <Grid justify="center" gutter="xs" style={{ marginTop: "1%", marginBottom: "1%"  }}>
           {productsDescription.map((card) => {
             return (
-              <Grid.Col span={{ sm: 4, xl: 2.5 }}>
+              <Grid.Col key={card.title} span={{ sm: 4, xl: 2.5 }}>
                 <ContentCard icon={card.icon} text={card.title} description={card.description} />
               </Grid.Col>
             );

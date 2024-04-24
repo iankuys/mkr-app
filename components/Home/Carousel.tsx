@@ -77,6 +77,7 @@ export function CardsCarousel({objects}: {objects: keyObject[]}) {
             controlsOffset="md"
             controlSize={30}
             mx={{}}
+            style={{ marginBottom: rem(50)}}
             loop
         >
             {slides}

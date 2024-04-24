@@ -1,35 +1,58 @@
 import React from 'react';
-import { keyObject } from './types';
+import { keyObject, productCard } from './types';
+import { IconBuildingFactory2, IconBuildingCottage, IconBuilding } from '@tabler/icons-react';
 
 export const carouselkeys : keyObject[] =[
     {
         key:
-            'https://keys.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/constuction-3.jpg',
         title: 'Best forests to visit in North America',
     },
     {
         key:
-            'https://keys.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/fan.jpg',
         title: 'Hawaii beaches review: better than you think',
     },
     {
         key:
-            'https://keys.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/houses-2.jpg',
         title: 'Mountains at night: 12 best locations to enjoy the view',
     },
     {
         key:
-            'https://keys.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/interior.jpg',
         title: 'Aurora in Norway: when to visit for best experience',
     },
     {
         key:
-            'https://keys.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/steel.jpg',
         title: 'Best places to visit this winter',
     },
     {
         key:
-            'https://keys.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
+            'MKR-Gallery/sideview.jpg',
         title: 'Active volcanos reviews: travel at your own risk',
     },
 ];
+
+export const productsDescription : productCard[] = [
+    {
+        title:
+            'Litter / Floor System House',
+        description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
+        icon: <IconBuildingFactory2 />
+    },
+    {
+        title:
+            'Slatted Elevated House',
+            description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
+            icon: <IconBuildingCottage />
+    },
+    {
+        title:
+            'Multi-Level House',
+        description: 'An economic conversion in existing houses while utilizing the space and increase level of production.',
+        icon: <IconBuilding />
+    }
+
+]

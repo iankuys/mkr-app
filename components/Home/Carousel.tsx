@@ -14,18 +14,16 @@ function Card({ url, title }: CardProps) {
         <Paper
             shadow="md"
             p="xl"
-            radius="md"
+            radius="sm"
             style={{ backgroundImage: `url(${url})` }}
             className={classes.card}
+            withBorder 
         >
             <div>
                 <Title order={3} className={classes.title}>
                     {title}
                 </Title>
             </div>
-            <Button variant="white" color="dark">
-                Read article
-            </Button>
         </Paper>
     );
 }
@@ -45,10 +43,9 @@ export function CardsCarousel({objects}: {objects: keyObject[]}) {
                 try {
                     const response = await getUrlResult(object.key);
         
-                    if (response.ok) {
-
+                    if (response) {
                         newImageObjects.push({
-                            url: response.url,
+                            url: response,
                             title: object.title
                         });
                     } else {
@@ -60,7 +57,7 @@ export function CardsCarousel({objects}: {objects: keyObject[]}) {
     
             })
         )
-
+        console.log(newImageObjects)
         setImages(newImageObjects);
     }
     const theme = useMantineTheme();
@@ -74,9 +71,13 @@ export function CardsCarousel({objects}: {objects: keyObject[]}) {
     return (
         <Carousel
             slideSize={{ base: '100%', sm: '50%', xl: '33%' }}
-            slideGap={{ base: rem(2), sm: 'xl' }}
+            slideGap={{ base: 'xs', sm: 'xl', xl: 'sm' }}
             align="start"
             slidesToScroll={mobile ? 1 : 2}
+            controlsOffset="md"
+            controlSize={30}
+            mx={{}}
+            loop
         >
             {slides}
         </Carousel>

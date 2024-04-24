@@ -9,7 +9,7 @@ export async function getUrlResult(filename : string): Promise<any> {
     const urlResult = (await getUrl({
       key: `${filename}`,
     }));
-    console.log('urlResult', urlResult);
-    return urlResult;
+    console.log('urlResult', urlResult.url.href);
+    return urlResult.url.href;
 
 }

@@ -17,8 +17,9 @@ export function HeroContentLeft({keyValue} : {keyValue : string}) {
     try {
       console.log(keyValue)
       const response = await getUrlResult(keyValue);
+      console.log(response)
 
-      if (response.ok) {
+      if (response) {
         setBackgroundUrl(response);
       } else {
         console.error("Error fetching from S3");

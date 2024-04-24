@@ -5,10 +5,11 @@ import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMenu.module.css';
 
 const links = [
-  { link: '/about', label: 'Features' },
+  { link: '/home', label: 'Home' },
+  { link: '/about', label: 'About' },
   {
     link: '#1',
-    label: 'Learn',
+    label: 'Our Products',
     links: [
       { link: '/docs', label: 'Documentation' },
       { link: '/resources', label: 'Resources' },
@@ -16,17 +17,8 @@ const links = [
       { link: '/blog', label: 'Blog' },
     ],
   },
-  { link: '/about', label: 'About' },
-  { link: '/pricing', label: 'Pricing' },
-  {
-    link: '#2',
-    label: 'Support',
-    links: [
-      { link: '/faq', label: 'FAQ' },
-      { link: '/demo', label: 'Book a demo' },
-      { link: '/forums', label: 'Forums' },
-    ],
-  },
+  { link: '/gallery', label: 'Gallery' },
+  { link: '/contact', label: 'Contact Us' },
 ];
 
 export function HeaderMenu() {
@@ -73,7 +65,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <MantineLogo size={28} />
+          MKR
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

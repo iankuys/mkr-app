@@ -5,6 +5,7 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import mkr_logo from '@/public/mkr_logo.png'
 import classes from './HeaderMenu.module.css';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const links = [
   { link: '/', label: 'Home' },
@@ -67,6 +68,7 @@ export function HeaderMenu() {
           <Image component={NextImage} src={mkr_logo} alt="mkr logo" height={95}/>
           <Group gap={5} visibleFrom="sm">
             {items}
+            <ColorSchemeToggle />
           </Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
         </div>

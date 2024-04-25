@@ -2,7 +2,7 @@
 
 import { Welcome } from '../components/Welcome/Welcome';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Container, Grid, rem } from '@mantine/core';
+import { Container, Grid, rem, useMantineColorScheme } from '@mantine/core';
 
 import { HeaderMenu } from '@/components/Home/HeaderMenu';
 import { FooterLinks } from '@/components/Home/FooterBar';

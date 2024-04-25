@@ -56,3 +56,5 @@ export const productsDescription : productCard[] = [
     }
 
 ]
+
+export const colors = ["#1BA100", "#ff8000"]

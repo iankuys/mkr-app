@@ -1,9 +1,9 @@
-import { Menu, Group, Center, Burger, Container } from '@mantine/core';
+import { Menu, Group, Center, Burger, Container, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import Link from 'next/link';
-
+import NextImage from 'next/image';
+import mkr_logo from '@/public/mkr_logo.png'
 import classes from './HeaderMenu.module.css';
 
 const links = [
@@ -64,7 +64,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          MKR
+          <Image component={NextImage} src={mkr_logo} alt="My image" height={70}/>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

@@ -64,7 +64,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Image component={NextImage} src={mkr_logo} alt="My image" height={70}/>
+          <Image component={NextImage} src={mkr_logo} alt="mkr logo" height={95}/>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

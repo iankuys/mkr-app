@@ -1,9 +1,10 @@
 "use client"
 
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
+import { Text, Container, ActionIcon, Group, Image, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './FooterLinks.module.css';
+import NextImage from 'next/image';
+import mkr_logo from '@/public/mkr_logo.png'
 
 const data = [
   {
@@ -27,7 +28,6 @@ const data = [
   {
     title: 'Community',
     links: [
-      { label: 'Join Discord', link: '#' },
       { label: 'Follow on Twitter', link: '#' },
       { label: 'Email newsletter', link: '#' },
       { label: 'GitHub discussions', link: '#' },
@@ -61,10 +61,7 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo size={30} />
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
-          </Text>
+          <Image component={NextImage} src={mkr_logo} alt="mkr logo" height={110}/>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>

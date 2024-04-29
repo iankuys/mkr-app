@@ -9,6 +9,7 @@ export interface CardProps {
 export interface keyObject {
     key: string,
     title: string,
+    link: string
     // Add any additional properties of the string object here
 }
 
@@ -16,6 +17,7 @@ export interface keyObject {
 export interface imageObject {
     url: string,
     title: string,
+    link: string
     // Add any additional properties of the string object here
 }
 

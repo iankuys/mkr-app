@@ -70,6 +70,7 @@ export function HeaderMenu() {
             {items}
             <ColorSchemeToggle />
           </Group>
+          {/*  TODO: make this burger work */}
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
         </div>
       </Container>

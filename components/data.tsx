@@ -7,31 +7,37 @@ export const carouselkeys : keyObject[] =[
         key:
             'MKR-Gallery/constuction-3.jpg',
         title: 'Best forests to visit in North America',
+        link: '/products'
     },
     {
         key:
             'MKR-Gallery/fan.jpg',
         title: 'Hawaii beaches review: better than you think',
+        link: '/products'
     },
     {
         key:
             'MKR-Gallery/houses-2.jpg',
         title: 'Mountains at night: 12 best locations to enjoy the view',
+        link: '/products'
     },
     {
         key:
             'MKR-Gallery/interior.jpg',
         title: 'Aurora in Norway: when to visit for best experience',
+        link: '/products'
     },
     {
         key:
             'MKR-Gallery/steel.jpg',
         title: 'Best places to visit this winter',
+        link: '/products'
     },
     {
         key:
             'MKR-Gallery/sideview.jpg',
         title: 'Active volcanos reviews: travel at your own risk',
+        link: '/products'
     },
 ];
 

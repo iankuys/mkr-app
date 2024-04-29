@@ -7,17 +7,18 @@ import { useState, useEffect } from 'react';
 import { getUrlResult } from '@/components/helper';
 
 const ImageComponent: React.FC<imageObject> = ({ url, title, link }) => (
-    <div className="image-container">
-        <Image
-            radius="md"
-            h={300}
-            src={url}
-        />
-        <Paper className="overlay">
-            <Text size="lg">{title}</Text>
-            <a href={link}>Click here</a>
-        </Paper>
-    </div>
+    <a href={link}>
+        <div className="image-container">
+            <Image
+                radius="md"
+                h={300}
+                src={url}
+            />
+            <Paper className="overlay">
+                <Text size="lg">{title}</Text>
+            </Paper>
+        </div>
+    </a>
 );
 
 const ImageCards: React.FC = () => {

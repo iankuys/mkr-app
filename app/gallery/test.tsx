@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid, Paper, Text, Image } from '@mantine/core';
 import './Gallery.css'; // import your css
-import { imageObject } from '@/components/types';
-import { carouselkeys } from '@/components/data';
+import { imageObject } from '@/src/types';
+import { carouselkeys } from '@/src/data';
 import { useState, useEffect } from 'react';
-import { getUrlResult } from '@/components/helper';
+import { getUrlResult } from '@/src/helper';
 
 const ImageComponent: React.FC<imageObject> = ({ url, title, link }) => (
     <a href={link}>

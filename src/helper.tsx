@@ -1,6 +1,6 @@
 import { getUrl } from 'aws-amplify/storage';
 import { Amplify } from 'aws-amplify';
-import amplifyconfig from '../src/amplifyconfiguration.json';
+import amplifyconfig from './amplifyconfiguration.json';
 
 Amplify.configure(amplifyconfig, {ssr: true});
 

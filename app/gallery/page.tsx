@@ -6,9 +6,9 @@ import { useHover } from '@mantine/hooks';
 import { HeaderMenu } from '@/components/Home/HeaderMenu';
 import { FooterLinks } from '@/components/Home/FooterBar';
 import { useState, useEffect } from 'react';
-import { keyObject, imageObject } from '@/components/types';
-import { getUrlResult } from '@/components/helper';
-import { carouselkeys } from '@/components/data';
+import { keyObject, imageObject } from '@/src/types';
+import { getUrlResult } from '@/src/helper';
+import { carouselkeys } from '@/src/data';
 import ImageCards from './test';
 
 export default function page() {

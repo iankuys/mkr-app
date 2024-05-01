@@ -4,8 +4,8 @@ import { Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core'
 import classes from './CardsCarousel.module.css';
 import '@mantine/carousel/styles.css';
 import { useState, useEffect } from 'react';
-import { getUrlResult } from '../helper';
-import { CardProps, keyObject, imageObject } from '../types';
+import { getUrlResult } from '../../src/helper';
+import { CardProps, keyObject, imageObject } from '../../src/types';
 
 
 function Card({ url, title }: CardProps) {

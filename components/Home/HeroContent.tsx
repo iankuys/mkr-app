@@ -2,7 +2,7 @@
 
 import { Overlay, Container, Title, Button, Text } from '@mantine/core';
 import classes from './HeroContentLeft.module.css';
-import { getUrlResult } from '../helper';
+import { getUrlResult } from '../../src/helper';
 import { useEffect, useState } from 'react';
 
 export function HeroContentLeft({keyValue} : {keyValue : string}) {

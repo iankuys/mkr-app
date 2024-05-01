@@ -1,6 +1,5 @@
 "use client"
 
-import { Welcome } from '../components/Welcome/Welcome';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { Container, Grid, rem, useMantineColorScheme } from '@mantine/core';
 
@@ -9,7 +8,7 @@ import { FooterLinks } from '@/components/Home/FooterBar';
 import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
 import { CardsCarousel } from '@/components/Home/Carousel';
-import { carouselkeys, productsDescription } from '@/components/data';
+import { carouselkeys, productsDescription } from '@/src/data';
 
 export default function HomePage() {
   return (

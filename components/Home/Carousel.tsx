@@ -46,7 +46,8 @@ export function CardsCarousel({objects}: {objects: keyObject[]}) {
                     if (response) {
                         newImageObjects.push({
                             url: response,
-                            title: object.title
+                            title: object.title,
+                            link: object.link
                         });
                     } else {
                         console.error("Error fetching from S3");

@@ -4,7 +4,7 @@ import React from 'react'
 import { Card, Button, Image, Text, Stack, Center } from '@mantine/core';
 import { em, rem } from '@mantine/core';
 
-export default function ContentCard({icon, text, description }: { icon: JSX.Element, text: string, description: string }) {
+export default function ContentCard({icon, title, description }: { icon: JSX.Element, title: string, description: string }) {
   return (
     <Card
       shadow="sm"
@@ -18,7 +18,7 @@ export default function ContentCard({icon, text, description }: { icon: JSX.Elem
       <Stack align='center'>
         {icon}
         <Text size="lg" mt="md">
-          {text}
+          {title}
         </Text>
         <Text mt="xs" color="dimmed" size="sm">
           {description}

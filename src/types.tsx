@@ -28,3 +28,12 @@ export interface productCard {
     icon: JSX.Element;
     // Add any additional properties of the string object here
 }
+
+
+export interface productDescription {
+    title: string,
+    description: string,
+    key: string
+    // Add any additional properties of the string object here
+}
+

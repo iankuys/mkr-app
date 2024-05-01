@@ -1,26 +1,53 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Image } from '@mantine/core'; 
+import { Center, Grid, Image } from '@mantine/core';
 import { getUrlResult } from '@/src/helper';
+import { productDescription } from '@/src/types';
 
-export default function ProductDescription({title, description, key}: {title: string, description:string, key:string}) {
-  
-  const [imageLink, setImageLink] = useState<Promise<any>>();
+export default function ProductDescription({ object }: { object: productDescription }) {
+
+  const [imageLink, setImageLink] = useState<any>();
+
+  async function fetchImageLink() {
+    if (object !== undefined) {
+      try {
+        console.log(object.key)
+        const response = await getUrlResult(object.key);
+        console.log(response)
+
+        if (response) {
+          setImageLink(response);
+        } else {
+          console.error("Error fetching from S3");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+
+    }
+  }
+
   useEffect(() => {
-    const image = getUrlResult(key);
-    setImageLink(image);
+    fetchImageLink();
   })
-  
+
   return (
-    <Grid>
-      <Grid.Col span={12}>
-        {title}
-      </Grid.Col>
-      <Grid.Col span={6}>
-        {description}
-      </Grid.Col>
-      <Grid.Col span={6}>
-        <Image src={imageLink}/>
-      </Grid.Col>
-    </Grid>
+    <>
+      <Center h={100} bg="var(--mantine-color-gray-light)">
+        {object.title}
+      </Center>
+      <Grid justify="center" align="center" px="20rem" py="1rem">
+        <Grid.Col span={6}>
+          {object.description}
+        </Grid.Col>
+        <Grid.Col span={6}>
+          <Image
+            radius="md"
+            h={300}
+            src={imageLink}
+          />
+        </Grid.Col>
+      </Grid>
+
+    </>
   )
 }

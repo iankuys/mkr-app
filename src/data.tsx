@@ -1,8 +1,8 @@
 import React from 'react';
-import { keyObject, productCard } from './types';
+import { keyObject, productCard, productDescription } from './types';
 import { IconBuildingFactory2, IconBuildingCottage, IconBuilding } from '@tabler/icons-react';
 
-export const carouselkeys : keyObject[] =[
+export const carouselkeys: keyObject[] = [
     {
         key:
             'MKR-Gallery/constuction-3.jpg',
@@ -41,7 +41,7 @@ export const carouselkeys : keyObject[] =[
     },
 ];
 
-export const productsDescription : productCard[] = [
+export const productsCardDescriptions: productCard[] = [
     {
         title:
             'Litter / Floor System House',
@@ -51,8 +51,8 @@ export const productsDescription : productCard[] = [
     {
         title:
             'Slatted Elevated House',
-            description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
-            icon: <IconBuildingCottage />
+        description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
+        icon: <IconBuildingCottage />
     },
     {
         title:
@@ -62,5 +62,14 @@ export const productsDescription : productCard[] = [
     }
 
 ]
+
+export const productsPageDescriptionSample: productDescription =
+{
+    title:
+        'Litter / Floor System House',
+    description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
+    key: 'MKR-Gallery/fan.jpg'
+}
+
 
 export const colors = ["#1BA100", "#ff8000"]

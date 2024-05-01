@@ -8,7 +8,7 @@ import { FooterLinks } from '@/components/Home/FooterBar';
 import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
 import { CardsCarousel } from '@/components/Home/Carousel';
-import { carouselkeys, productsDescription } from '@/src/data';
+import { carouselkeys, productsCardDescriptions } from '@/src/data';
 
 export default function HomePage() {
   return (
@@ -22,10 +22,10 @@ export default function HomePage() {
           </Grid.Col>
         </Grid>
         <Grid justify="center" gutter="xs" style={{ marginTop: "1%", marginBottom: "1%"  }}>
-          {productsDescription.map((card) => {
+          {productsCardDescriptions.map((card) => {
             return (
               <Grid.Col key={card.title} span={{ sm: 4, xl: 2.5 }}>
-                <ContentCard icon={card.icon} text={card.title} description={card.description} />
+                <ContentCard {...card} />
               </Grid.Col>
             );
           })

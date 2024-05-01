@@ -3,6 +3,9 @@ import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 import { Amplify } from 'aws-amplify';
+
+import { HeaderMenu } from '@/components/Home/HeaderMenu';
+import { FooterLinks } from '@/components/Home/FooterBar';
 import amplifyconfig from '../src/amplifyconfiguration.json';
 
 Amplify.configure(amplifyconfig);
@@ -24,7 +27,11 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <HeaderMenu />
+          {children}
+          <FooterLinks />
+        </MantineProvider>
       </body>
     </html>
   );

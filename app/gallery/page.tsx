@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import { keyObject, imageObject } from '@/src/types';
 import { getUrlResult } from '@/src/helper';
 import { carouselkeys } from '@/src/data';
-import ImageCards from './test';
+import ImageCards from '@/components/Gallery/ImageCards';
 
 export default function page() {
 
@@ -63,12 +63,10 @@ export default function page() {
   }
   return (
     <>
-      <HeaderMenu />
       <Center h={100} bg="var(--mantine-color-gray-light)">
         <Box><Title order={3}>MKR Gallery</Title></Box>
       </Center>
       <ImageCards />
-      <FooterLinks />
     </>
   )
 }

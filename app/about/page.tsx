@@ -8,8 +8,7 @@ import { Stack, Grid, Image, Title, Text  } from '@mantine/core';
 export default function page() {
   return (
     <>
-        <HeaderMenu />
-        <div>
+=        <div>
             <Grid px="20rem" py="1rem">
               <Grid.Col span={6}>
                 <Image
@@ -51,7 +50,6 @@ export default function page() {
               </Grid.Col>
             </Grid>     
           </div>
-        <FooterLinks />
     </>
   )
 }

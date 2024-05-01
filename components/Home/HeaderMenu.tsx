@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu, Group, Center, Burger, Container, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
@@ -14,7 +16,7 @@ const links = [
     link: '#1',
     label: 'Our Products',
     links: [
-      { link: '/productsample', label: 'Product Sample' },
+      { link: '/products/productsample', label: 'Product Sample' },
       { link: '/resources', label: 'Resources' },
       { link: '/community', label: 'Community' },
       { link: '/blog', label: 'Blog' },

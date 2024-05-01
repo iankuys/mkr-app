@@ -8,11 +8,9 @@ import { FooterLinks } from '@/components/Home/FooterBar';
 export default function ContactPage() {
   return (
     <>
-      <HeaderMenu />
         <div className="container mx-auto min-w-full">
             <ContactUs />
         </div>
-      <FooterLinks />
     </>
   )
 }

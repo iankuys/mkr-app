@@ -15,7 +15,6 @@ export default function HomePage() {
     <>
       {/* <Welcome />
     <ColorSchemeToggle /> */}
-      <HeaderMenu />
       <div className="container mx-auto min-w-full">
         <Grid>
           <Grid.Col span={12}>
@@ -38,7 +37,6 @@ export default function HomePage() {
           </Grid.Col>
         </Grid>
       </div>
-      <FooterLinks />
     </>
   );
 }

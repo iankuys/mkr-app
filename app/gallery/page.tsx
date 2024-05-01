@@ -11,7 +11,7 @@ import { getUrlResult } from '@/components/helper';
 import { carouselkeys } from '@/components/data';
 import ImageCards from './test';
 
-export default function page({ objects }: { objects: keyObject[] }) {
+export default function page() {
 
   const { hovered, ref } = useHover();
   const [imageObjects, setImageObjects] = useState<imageObject[]>([]);

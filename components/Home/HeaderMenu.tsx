@@ -14,7 +14,7 @@ const links = [
     link: '#1',
     label: 'Our Products',
     links: [
-      { link: '/docs', label: 'Documentation' },
+      { link: '/productsample', label: 'Product Sample' },
       { link: '/resources', label: 'Resources' },
       { link: '/community', label: 'Community' },
       { link: '/blog', label: 'Blog' },
@@ -29,7 +29,13 @@ export function HeaderMenu() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link}>
+        <Link href={link.link}
+          className={classes.link}
+        >{item.label}
+
+        </Link>
+      </Menu.Item>
     ));
 
     if (menuItems) {
@@ -51,13 +57,13 @@ export function HeaderMenu() {
     }
 
     return (
-      <Link 
+      <Link
         key={link.label}
         href={link.link}
         className={classes.link}
-        >
+      >
         {link.label}
-        </Link>
+      </Link>
     );
   });
 
@@ -65,7 +71,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Image component={NextImage} src={mkr_logo} alt="mkr logo" height={95}/>
+          <Image component={NextImage} src={mkr_logo} alt="mkr logo" height={95} />
           <Group gap={5} visibleFrom="sm">
             {items}
             <ColorSchemeToggle />

@@ -3,8 +3,6 @@
 import React from 'react';
 import { Center, Box, Grid, Image, Title, Overlay } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
-import { HeaderMenu } from '@/components/Home/HeaderMenu';
-import { FooterLinks } from '@/components/Home/FooterBar';
 import { useState, useEffect } from 'react';
 import { keyObject, imageObject } from '@/src/types';
 import { getUrlResult } from '@/src/helper';

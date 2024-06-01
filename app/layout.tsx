@@ -5,7 +5,7 @@ import { theme } from '../theme';
 import { Amplify } from 'aws-amplify';
 
 import { HeaderMenu } from '@/components/Home/HeaderMenu';
-import { FooterLinks } from '@/components/Home/FooterBar';
+import { FooterLinks } from '@/components/Footer/FooterBar';
 import amplifyconfig from '../src/amplifyconfiguration.json';
 
 Amplify.configure(amplifyconfig);

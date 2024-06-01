@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Center, Grid, Image } from '@mantine/core';
+import { Center, Grid, Image, Title } from '@mantine/core';
 import { getUrlResult } from '@/src/helper';
 import { productDescription } from '@/src/types';
 
@@ -33,7 +33,9 @@ export default function ProductDescription({ object }: { object: productDescript
   return (
     <>
       <Center h={100} bg="var(--mantine-color-gray-light)">
-        {object.title}
+        <Title order={2}>
+          {object.title}
+        </Title>
       </Center>
       <Grid justify="center" align="center" px="20rem" py="1rem">
         <Grid.Col span={6}>

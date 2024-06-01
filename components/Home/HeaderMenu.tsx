@@ -22,6 +22,16 @@ const links = [
       { link: '/blog', label: 'Blog' },
     ],
   },
+  {
+    link: '#1',
+    label: 'Our Services',
+    links: [
+      { link: '/products/productsample', label: 'Product Sample' },
+      { link: '/resources', label: 'Resources' },
+      { link: '/community', label: 'Community' },
+      { link: '/blog', label: 'Blog' },
+    ],
+  },
   { link: '/gallery', label: 'Gallery' },
   { link: '/contact', label: 'Contact Us' },
 ];

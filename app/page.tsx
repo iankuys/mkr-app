@@ -4,7 +4,7 @@ import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeTo
 import { Container, Grid, rem, useMantineColorScheme } from '@mantine/core';
 
 import { HeaderMenu } from '@/components/Home/HeaderMenu';
-import { FooterLinks } from '@/components/Home/FooterBar';
+import { FooterLinks } from '@/components/Footer/FooterBar';
 import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
 import { CardsCarousel } from '@/components/Home/Carousel';
@@ -21,7 +21,7 @@ export default function HomePage() {
             <HeroContentLeft keyValue="MKR-Gallery/houses.jpg" />
           </Grid.Col>
         </Grid>
-        <Grid justify="center" gutter="xs" style={{ marginTop: "1%", marginBottom: "1%"  }}>
+        {/* <Grid justify="center" gutter="xs" style={{ marginTop: "1%", marginBottom: "1%"  }}>
           {productsCardDescriptions.map((card) => {
             return (
               <Grid.Col key={card.title} span={{ sm: 4, xl: 2.5 }}>
@@ -30,12 +30,12 @@ export default function HomePage() {
             );
           })
           }
-        </Grid>
-        <Grid>
+        </Grid> */}
+        {/* <Grid>
           <Grid.Col span={12}>
             <CardsCarousel objects={carouselkeys} />
           </Grid.Col>
-        </Grid>
+        </Grid> */}
       </div>
     </>
   );

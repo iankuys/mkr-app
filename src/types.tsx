@@ -13,6 +13,17 @@ export interface keyObject {
     // Add any additional properties of the string object here
 }
 
+export interface aboutObject {
+    title: string,
+    description: string,
+    imageObject: imageFixedObject
+}
+
+export interface imageFixedObject {
+    url: string,
+    key: string,
+    // Add any additional properties of the string object here
+}
 
 export interface imageObject {
     url: string,

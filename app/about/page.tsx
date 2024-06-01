@@ -1,53 +1,86 @@
 "use client"
 
 import React from 'react';
-import { HeaderMenu } from '@/components/Home/HeaderMenu';
-import { FooterLinks } from '@/components/Home/FooterBar';
-import { Stack, Grid, Image, Title, Text } from '@mantine/core';
+import { Stack, Grid, Image, Title, Text, BackgroundImage, Overlay, Center } from '@mantine/core';
+import classes from './aboutPage.module.css';
+import { aboutObject } from '@/src/types';
+import { useState, useEffect } from 'react';
+import { aboutPageData } from '@/src/data';
+import { fetchURL } from '@/src/helper';
 
 export default function page() {
+  const [aboutObjects, setAboutObjects] = useState<aboutObject[]>([])
+
+  useEffect(() => {
+    const keys = aboutPageData.map(item => item.key);
+    const fetchData = async (keys: any) => {
+      try {
+        const imageData = await fetchURL(keys);
+        console.log(imageData);
+
+        setAboutObjects(
+          aboutPageData.reduce((acc: aboutObject[], item) => {
+            const matchingItem = imageData.find(aboutItem => aboutItem.key === item.key);
+
+            if (matchingItem) {
+              let newAboutObject: aboutObject = {
+                title: item.title,
+                description: item.description,
+                imageObject: {
+                  url: matchingItem.url,
+                  key: matchingItem.key
+                }
+              }
+              return [...acc, newAboutObject];
+            }
+            return acc;
+          }, [] as aboutObject[]));
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      }
+    };
+
+    fetchData(keys);
+  }, [])
+
   return (
     <>
-      =        <div>
-        <Grid px="20rem" py="1rem">
-          <Grid.Col span={6}>
-            <Image
-              radius="md"
-              h={500}
-              src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-10.png"
-            />
-
+      <div className={classes.background}>
+        <Overlay
+          gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
+          opacity={1}
+          zIndex={0}
+        />
+        <Grid className={classes.grid} px="5%" py="1rem" style={{ zIndex: 2 }}>
+          <Grid.Col span={12}>
+            <Center>
+              <Title className={classes.title} order={1} >About Us</Title>
+            </Center>
           </Grid.Col>
-          <Grid.Col span={6}>
-            <Stack
-              align="stretch"
-              justify='center'
-              gap="md"
-              style={{ height: '100%' }}
-            >
-              <Title order={1}>This is h1 title</Title>
-              <Text size="md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum et ex a ultricies. Nunc at accumsan est. Suspendisse potenti. Donec egestas mauris vitae est ultricies, quis ultricies sapien vehicula. Nunc a mauris ut libero suscipit euismod sit amet quis turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere nunc vitae massa lacinia, id maximus nisi tincidunt. Cras massa neque, lacinia eu nulla non, rhoncus condimentum mauris. Nunc lobortis lobortis fermentum. Nulla porta, massa non placerat pulvinar, massa risus feugiat massa, vel congue neque dolor nec lectus. Mauris vestibulum nisi magna, eget rhoncus orci laoreet quis. Nam semper ipsum mi, vel gravida turpis euismod in.</Text>
-            </Stack>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Stack
-              align="stretch"
-              justify='center'
-              gap="md"
-              style={{ height: '100%' }}
-            >
-              <Title order={1}>This is h2 title</Title>
-              <Text size="md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum et ex a ultricies. Nunc at accumsan est. Suspendisse potenti. Donec egestas mauris vitae est ultricies, quis ultricies sapien vehicula. Nunc a mauris ut libero suscipit euismod sit amet quis turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere nunc vitae massa lacinia, id maximus nisi tincidunt. Cras massa neque, lacinia eu nulla non, rhoncus condimentum mauris. Nunc lobortis lobortis fermentum. Nulla porta, massa non placerat pulvinar, massa risus feugiat massa, vel congue neque dolor nec lectus. Mauris vestibulum nisi magna, eget rhoncus orci laoreet quis. Nam semper ipsum mi, vel gravida turpis euismod in.</Text>
-            </Stack>
-
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Image
-              radius="md"
-              h={500}
-              src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"
-            />
-          </Grid.Col>
+          {aboutObjects.map(item => {
+            return (
+              <React.Fragment key={item.imageObject.key}>
+                <Grid.Col span={6}>
+                  <Image
+                    radius="md"
+                    h={500}
+                    src={item.imageObject.url}
+                  />
+                </Grid.Col>
+                <Grid.Col span={6}>
+                  <Stack
+                    align="stretch"
+                    justify='center'
+                    gap="md"
+                    style={{ height: '100%' }}
+                  >
+                    <Title className={classes.subtitle} order={1}>{item.title}</Title>
+                    <Text className={classes.description} size="md">{item.description}</Text>
+                  </Stack>
+                </Grid.Col>
+              </React.Fragment>
+            )
+          })}
         </Grid>
       </div>
     </>

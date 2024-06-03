@@ -21,7 +21,7 @@ export async function fetchURL(keys: any[]): Promise<imageObject[]> {
   await Promise.all(
     keys.map(async (key) => {
       try {
-        const response = await getUrlResult(key.key);
+        const response = await getUrlResult(key);
 
         if (response) {
           newImageObjects.push({

@@ -20,7 +20,7 @@ export default function page() {
 
         setAboutObjects(
           aboutPageData.reduce((acc: aboutObject[], item) => {
-            const matchingItem = imageData.find(aboutItem => aboutItem.key === item.key);
+            const matchingItem = imageData.find(aboutItem => aboutItem.s3key === item.key);
 
             if (matchingItem) {
               let newAboutObject: aboutObject = {
@@ -28,7 +28,7 @@ export default function page() {
                 description: item.description,
                 imageObject: {
                   url: matchingItem.url,
-                  key: matchingItem.key
+                  s3key: matchingItem.s3key
                 }
               }
               return [...acc, newAboutObject];
@@ -57,17 +57,19 @@ export default function page() {
               <Title className={classes.title} order={1} >About Us</Title>
             </Center>
           </Grid.Col>
-          {aboutObjects.map(item => {
+          {aboutObjects.map((item, index) => {
+            
+            console.log(index)
             return (
-              <React.Fragment key={item.imageObject.key}>
-                <Grid.Col span={6}>
+              <React.Fragment key={item.imageObject.s3key}>
+                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 0 + index : 1 + index}}>
                   <Image
                     radius="md"
                     h={500}
                     src={item.imageObject.url}
                   />
                 </Grid.Col>
-                <Grid.Col span={6}>
+                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 1 + index : 0 + index}}>
                   <Stack
                     align="stretch"
                     justify='center'

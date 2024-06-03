@@ -1,7 +1,7 @@
 import { getUrl } from 'aws-amplify/storage';
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './amplifyconfiguration.json';
-import { imageFixedObject } from './types';
+import { imageObject } from './types';
 
 Amplify.configure(amplifyconfig, {ssr: true});
 
@@ -15,8 +15,8 @@ export async function getUrlResult(filename : string): Promise<any> {
 
 }
 
-export async function fetchURL(keys: any[]): Promise<imageFixedObject[]> {
-  const newImageObjects: imageFixedObject[] = [];
+export async function fetchURL(keys: any[]): Promise<imageObject[]> {
+  const newImageObjects: imageObject[] = [];
 
   await Promise.all(
     keys.map(async (key) => {
@@ -26,7 +26,7 @@ export async function fetchURL(keys: any[]): Promise<imageFixedObject[]> {
         if (response) {
           newImageObjects.push({
             url: response,
-            key: key,
+            s3key: key,
           });
         } else {
           console.error("Error fetching from S3");

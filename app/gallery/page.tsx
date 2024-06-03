@@ -4,7 +4,7 @@ import React from 'react';
 import { Center, Box, Grid, Image, Title, Overlay } from '@mantine/core';
 import { useHover } from '@mantine/hooks';
 import { useState, useEffect } from 'react';
-import { keyObject, imageObject } from '@/src/types';
+import { keyObject, imageGalleryObject } from '@/src/types';
 import { getUrlResult } from '@/src/helper';
 import { carouselkeys } from '@/src/data';
 import ImageCards from '@/components/Gallery/ImageCards';
@@ -12,7 +12,7 @@ import ImageCards from '@/components/Gallery/ImageCards';
 export default function page() {
 
   const { hovered, ref } = useHover();
-  const [imageObjects, setImageObjects] = useState<imageObject[]>([]);
+  const [imageObjects, setImageObjects] = useState<imageGalleryObject[]>([]);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -34,12 +34,12 @@ export default function page() {
   }
 
   async function fetchURL() {
-    const newImageObjects: imageObject[] = [];
+    const newImageObjects: imageGalleryObject[] = [];
 
     await Promise.all(
       carouselkeys.map(async (object) => {
         try {
-          const response = await getUrlResult(object.key);
+          const response = await getUrlResult(object.s3key);
 
           if (response) {
             newImageObjects.push({

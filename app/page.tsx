@@ -3,11 +3,11 @@
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { Container, Grid, rem, useMantineColorScheme } from '@mantine/core';
 
-import { HeaderMenu } from '@/components/Home/HeaderMenu';
+import { HeaderMenu } from '@/components/Header/HeaderMenu';
 import { FooterLinks } from '@/components/Footer/FooterBar';
 import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
-import { CardsCarousel } from '@/components/Home/Carousel';
+import { CardsCarousel } from '@/components/Carousel/Carousel';
 import { carouselkeys, productsCardDescriptions } from '@/src/data';
 
 export default function HomePage() {

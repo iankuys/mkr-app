@@ -1,5 +1,5 @@
 import React from 'react';
-import { keyObject, productCard, productDescription } from './types';
+import { keyObject, productCard, productRawObject } from './types';
 import { IconBuildingFactory2, IconBuildingCottage, IconBuilding } from '@tabler/icons-react';
 
 export const heroContentDescription = {
@@ -9,15 +9,101 @@ export const heroContentDescription = {
     key: 'MKR-Gallery/houses.jpg'
 }
 
-export const footerCompanyDescription = [ 
+export const headerMenuLinks = [
+    { link: '/', label: 'Home' },
+    { link: '/about', label: 'About' },
     {
-      description: 'Description bla bla bla',
-      list: [
-        { text: 'One Stop Solution' },
-        { text: 'Include all components at different rooms' },
-      ],
+        link: '#',
+        label: 'Our Products',
+        links: [
+            { link: '/products/CageHouses', label: 'Cage Houses' },
+            { link: '/products/FloorSystemHouse', label: 'Litter/Floor System House' },
+            { link: '/products/ElevatedHouse', label: 'Elevated House' },
+            { link: '/products/MultiLevelHouse', label: 'Multi-Level House' },
+            { link: '/products/Hatchery', label: 'Hatchery' },
+            { link: '/products/ProcessingPlant', label: 'Processing Plant' },
+            { link: '/products/FermentationPlant', label: 'Fermentation Plant' },
+            { link: '/products/Feedmill', label: 'Feedmill' },
+            { link: '/products/Piggeries', label: 'Piggeries' },
+        ],
     },
-  ];
+    {
+        link: '#',
+        label: 'Our Services',
+        links: [
+            { link: '/services/Consultaion&Advisory', label: 'Consultaion & Advisory' },
+            { link: '/services/ProfessionalDesign', label: 'ProfessionalDesign' },
+        ],
+    },
+    { link: '/gallery', label: 'Gallery' },
+    {
+        link: '#',
+        label: 'Community',
+        links: [
+            { link: '/community/Exhibition', label: 'Exhibition' },
+            { link: '/community/Seminar', label: 'Seminar' },
+        ],
+    },
+    { link: '/contact', label: 'Contact Us' },
+];
+
+export const productObjects: productRawObject[] = [
+    {
+        title: 'Cage Houses',
+        description: 'Cage houses are designed to provide a comfortable environment for the birds, while also ensuring that the eggs are kept clean and safe. The cages are made of high-quality materials that are easy to clean and maintain, and are designed to provide the birds with plenty of space to move around and exercise.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Litter/Floor System House',
+        description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Elevated House',
+        description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Multi-Level House',
+        description: 'An economic conversion in existing houses while utilizing the space and increase level of production.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Hatchery',
+        description: 'Hatchery is a place where eggs are hatched under artificial conditions, especially those of poultry or fish.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Processing Plant',
+        description: 'Processing plant is a facility where raw materials are processed into finished products.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Fermentation Plant',
+        description: 'Fermentation plant is a facility where raw materials are processed into finished products.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Feedmill',
+        description: 'Feedmill is a facility where raw materials are processed into finished products.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+    {
+        title: 'Piggeries',
+        description: 'Piggeries is a facility where raw materials are processed into finished products.',
+        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    },
+];
+
+export const footerCompanyDescription = [
+    {
+        description: 'Description bla bla bla',
+        list: [
+            { text: 'One Stop Solution' },
+            { text: 'Include all components at different rooms' },
+        ],
+    },
+];
 
 export const aboutPageData = [
     {
@@ -36,40 +122,40 @@ export const aboutPageData = [
         key: 'MKR-Gallery/houses-2.jpg'
     }
 ]
-  
+
 export const carouselkeys: keyObject[] = [
     {
-        key:
+        s3key:
             'MKR-Gallery/constuction-3.jpg',
         title: 'Best forests to visit in North America',
         link: '/products'
     },
     {
-        key:
+        s3key:
             'MKR-Gallery/fan.jpg',
         title: 'Hawaii beaches review: better than you think',
         link: '/products'
     },
     {
-        key:
+        s3key:
             'MKR-Gallery/houses-2.jpg',
         title: 'Mountains at night: 12 best locations to enjoy the view',
         link: '/products'
     },
     {
-        key:
+        s3key:
             'MKR-Gallery/interior.jpg',
         title: 'Aurora in Norway: when to visit for best experience',
         link: '/products'
     },
     {
-        key:
+        s3key:
             'MKR-Gallery/steel.jpg',
         title: 'Best places to visit this winter',
         link: '/products'
     },
     {
-        key:
+        s3key:
             'MKR-Gallery/sideview.jpg',
         title: 'Active volcanos reviews: travel at your own risk',
         link: '/products'
@@ -104,13 +190,13 @@ export const productsCardDescriptions: productCard[] = [
 
 ]
 
-export const productsPageDescriptionSample: productDescription =
-{
-    title:
-        'Litter / Floor System House',
-    description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
-    key: 'MKR-Gallery/fan.jpg'
-}
+// export const productsPageDescriptionSample: productDescription =
+// {
+//     title:
+//         'Litter / Floor System House',
+//     description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
+//     s3keys: 'MKR-Gallery/fan.jpg'
+// }
 
 
 export const colors = ["#1BA100", "#ff8000"]

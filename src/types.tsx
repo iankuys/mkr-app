@@ -7,7 +7,7 @@ export interface CardProps {
 }
 
 export interface keyObject {
-    key: string,
+    s3key: string,
     title: string,
     link: string
     // Add any additional properties of the string object here
@@ -16,16 +16,16 @@ export interface keyObject {
 export interface aboutObject {
     title: string,
     description: string,
-    imageObject: imageFixedObject
-}
-
-export interface imageFixedObject {
-    url: string,
-    key: string,
-    // Add any additional properties of the string object here
+    imageObject: imageObject
 }
 
 export interface imageObject {
+    url: string,
+    s3key: string,
+    // Add any additional properties of the string object here
+}
+
+export interface imageGalleryObject {
     url: string,
     title: string,
     link: string
@@ -41,10 +41,20 @@ export interface productCard {
 }
 
 
-export interface productDescription {
+export interface productRawObject {
     title: string,
     description: string,
-    key: string
+    s3keys: string[]
     // Add any additional properties of the string object here
 }
 
+export interface productObject {
+    title: string,
+    description: string,
+    url: string[]
+}
+
+export interface carouselImageObject {
+    url: string,
+    title: string,
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid, Paper, Text, Image } from '@mantine/core';
 import './Gallery.css'; // import your css
-import { imageObject } from '@/src/types';
+import { imageGalleryObject } from '@/src/types';
 import { carouselkeys } from '@/src/data';
 import { useState, useEffect } from 'react';
 import { getUrlResult } from '@/src/helper';
 
-const ImageComponent: React.FC<imageObject> = ({ url, title, link }) => (
+const ImageComponent: React.FC<imageGalleryObject> = ({ url, title, link }) => (
     <a href={link}>
         <div className="image-container">
             <Image
@@ -23,19 +23,19 @@ const ImageComponent: React.FC<imageObject> = ({ url, title, link }) => (
 
 const ImageCards: React.FC = () => {
 
-    const [imageObjects, setImageObjects] = useState<imageObject[]>([]);
+    const [imageObjects, setImageObjects] = useState<imageGalleryObject[]>([]);
 
     useEffect(() => {
         fetchURL();
     }, []);
 
     async function fetchURL() {
-        const newImageObjects: imageObject[] = [];
+        const newImageObjects: imageGalleryObject[] = [];
 
         await Promise.all(
             carouselkeys.map(async (object) => {
                 try {
-                    const response = await getUrlResult(object.key);
+                    const response = await getUrlResult(object.s3key);
 
                     if (response) {
                         newImageObjects.push({
@@ -58,7 +58,7 @@ const ImageCards: React.FC = () => {
 
     return (
         <Grid px="1rem" py="1rem">
-            {imageObjects?.map((imageObject: imageObject, index) => {
+            {imageObjects?.map((imageObject: imageGalleryObject, index) => {
                 return (
                     <Grid.Col span={4} key={imageObject.url}>
                         <ImageComponent key={index} {...imageObject} />

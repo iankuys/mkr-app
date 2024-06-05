@@ -1,45 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Center, Grid, Image, Title } from '@mantine/core';
 import { getUrlResult } from '@/src/helper';
-import { productRawObject , productCard} from '@/src/types';
+import { productRawObject, productCard, carouselImageObject } from '@/src/types';
 import { CardsCarousel } from '../Carousel/Carousel';
-import { productObjects } from '@/src/data';
 import { fetchURL } from '@/src/helper';
 
 export default function ProductDescription({ object }: { object: productRawObject }) {
 
   const [productObject, setProductObject] = useState<any>();
-  // useEffect(() => {
-  //   const keys = productObjects.map(item => item.key);
-  //   const fetchData = async (keys: any) => {
-  //     try {
-  //       const imageData = await fetchURL(keys);
-  //       console.log(imageData);
 
-  //       setProductObject(
-  //         productObjects.reduce((acc: productCard[], item) => {
-  //           const matchingItem = imageData.find(aboutItem => aboutItem.s3key === item.key);
+  useEffect(() => {
+    const keys = object.s3keys;
+    const fetchData = async (keys: any) => {
+      try {
+        const imageData = await fetchURL(keys);
+        console.log(imageData);
 
-  //           if (matchingItem) {
-  //             let newAboutObject: productCard = {
-  //               title: item.title,
-  //               description: item.description,
-  //               imageObject: {
-  //                 url: matchingItem.url,
-  //                 s3key: matchingItem.s3key
-  //               }
-  //             }
-  //             return [...acc, newAboutObject];
-  //           }
-  //           return acc;
-  //         }, [] as productCard[]));
-  //     } catch (error) {
-  //       console.error('Failed to fetch data:', error);
-  //     }
-  //   };
+        setProductObject(imageData);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      }
+    };
 
-  //   fetchData(keys);
-  // }, [])
+    fetchData(keys);
+  }, [])
 
 
   return (
@@ -54,11 +38,7 @@ export default function ProductDescription({ object }: { object: productRawObjec
           {object.description}
         </Grid.Col>
         <Grid.Col span={6}>
-          <Image
-            radius="md"
-            h={300}
-            src={productObject}
-          />
+          <CardsCarousel carouselCard={productObject}/>
         </Grid.Col>
       </Grid>
 

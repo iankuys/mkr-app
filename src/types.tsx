@@ -3,7 +3,6 @@ import { IconArrowLeft } from '@tabler/icons-react'
 
 export interface CardProps {
     url: string;
-    title: string;
 }
 
 export interface keyObject {
@@ -54,7 +53,12 @@ export interface productObject {
     url: string[]
 }
 
-export interface carouselImageObject {
-    url: string,
+export interface serviceRawObject {
     title: string,
+    descriptionList: string[],
+    s3keys: string[]
+}
+
+export interface carouselImageObject {
+    url: string
 }

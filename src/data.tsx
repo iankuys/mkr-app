@@ -47,53 +47,78 @@ export const headerMenuLinks = [
     { link: '/contact', label: 'Contact Us' },
 ];
 
-export const productObjects: productRawObject[] = [
-    {
-        title: 'Cage Houses',
-        description: 'Cage houses are designed to provide a comfortable environment for the birds, while also ensuring that the eggs are kept clean and safe. The cages are made of high-quality materials that are easy to clean and maintain, and are designed to provide the birds with plenty of space to move around and exercise.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Litter/Floor System House',
-        description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Elevated House',
-        description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Multi-Level House',
-        description: 'An economic conversion in existing houses while utilizing the space and increase level of production.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Hatchery',
-        description: 'Hatchery is a place where eggs are hatched under artificial conditions, especially those of poultry or fish.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Processing Plant',
-        description: 'Processing plant is a facility where raw materials are processed into finished products.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Fermentation Plant',
-        description: 'Fermentation plant is a facility where raw materials are processed into finished products.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Feedmill',
-        description: 'Feedmill is a facility where raw materials are processed into finished products.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-    {
-        title: 'Piggeries',
-        description: 'Piggeries is a facility where raw materials are processed into finished products.',
-        s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
-    },
-];
+export const cageHouses: productRawObject = {
+    title: 'Cage Houses',
+    description: 'Cage houses are designed to provide a comfortable environment for the birds, while also ensuring that the eggs are kept clean and safe. The cages are made of high-quality materials that are easy to clean and maintain, and are designed to provide the birds with plenty of space to move around and exercise.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const litterFloor: productRawObject = {
+    title: 'Litter/Floor System House',
+    description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+export const elevatedHouse: productRawObject = {
+    title: 'Elevated House',
+    description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const multiLevelHouse: productRawObject = {
+    title: 'Multi-Level House',
+    description: 'An economic conversion in existing houses while utilizing the space and increase level of production.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const hatchery: productRawObject = {
+    title: 'Hatchery',
+    description: 'Hatchery is a place where eggs are hatched under artificial conditions, especially those of poultry or fish.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const processingPlant: productRawObject = {
+    title: 'Processing Plant',
+    description: 'Processing plant is a facility where raw materials are processed into finished products.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const fermentationPlant: productRawObject = {
+    title: 'Fermentation Plant',
+    description: 'Fermentation plant is a facility where raw materials are processed into finished products.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const feedmill: productRawObject = {
+    title: 'Feedmill',
+    description: 'Feedmill is a facility where raw materials are processed into finished products.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const piggeries: productRawObject = {
+    title: 'Piggeries',
+    description: 'Piggeries is a facility where raw materials are processed into finished products.',
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const consultationAdvisory = {
+    title: 'Consultaion & Advisory',
+    descriptionList: [
+        'Provide professional advice on local authority requirements and regulations.',
+        'Provide technical advice and feasibility recommendations based on site location, ground condition, weather condition.',
+        'Provide option studies on the most efficient farm layout to achieve maximum land utilization and production.',    ],
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
+
+export const professionalDesign = {
+    title: 'Professional Design',
+    descriptionList: [
+        'Team of engineers led by an experienced qualified professional engineer.',
+        'Design aimed for easy shipping & easy on-site installation.',
+        'Economical design while maintaining the highest quality of the product. Team of experienced QC to ensure quality assurance and error-free fabrication.',
+        'Environmentally friendly design to ensure minimal material wastage and energy consumption.',
+    ],
+    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+};
 
 export const footerCompanyDescription = [
     {

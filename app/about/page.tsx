@@ -45,6 +45,9 @@ export default function page() {
 
   return (
     <>
+      <Center h={120} bg="var(--mantine-color-gray-light)">
+        <Title order={1} >About Us</Title>
+      </Center>
       <div className={classes.background}>
         <Overlay
           gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
@@ -53,23 +56,21 @@ export default function page() {
         />
         <Grid className={classes.grid} px="5%" py="1rem" style={{ zIndex: 2 }}>
           <Grid.Col span={12}>
-            <Center>
-              <Title className={classes.title} order={1} >About Us</Title>
-            </Center>
           </Grid.Col>
           {aboutObjects.map((item, index) => {
-            
+
             console.log(index)
             return (
               <React.Fragment key={item.imageObject.s3key}>
-                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 0 + index : 1 + index}}>
+                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 0 + index : 1 + index }}>
                   <Image
                     radius="md"
                     h={500}
                     src={item.imageObject.url}
+                    style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.75)'}}
                   />
                 </Grid.Col>
-                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 1 + index : 0 + index}}>
+                <Grid.Col span={6} style={{ order: (index + 1) % 2 === 0 ? 1 + index : 0 + index }}>
                   <Stack
                     align="stretch"
                     justify='center'

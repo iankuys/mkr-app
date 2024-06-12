@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Center, Grid, List, Image, Stack, Title } from '@mantine/core';
+import { Center, Grid, List, Image, Stack, Title, Card, rem, Text } from '@mantine/core';
 import { serviceRawObject } from '@/src/types';
 import { CardsCarousel } from '../Carousel/Carousel';
 import { fetchURL } from '@/src/helper';
 
-export default function ServiceDescription({ object }: { object: serviceRawObject }) {
+export default function ServiceDescription({ object }: { object: any }) {
 
     const [serviceImages, setServiceImages] = useState<any>();
 
@@ -27,25 +27,30 @@ export default function ServiceDescription({ object }: { object: serviceRawObjec
 
     return (
         <>
-            <Center h={100} bg="var(--mantine-color-gray-light)">
-                <Title order={2}>
+            <Center h={120} bg="var(--mantine-color-gray-light)">
+                <Title order={1}>
                     {object.title}
                 </Title>
             </Center>
-            <Grid justify="center" align="center" py="1rem">
+            <Grid justify="center" py="1rem" style={{ margin: rem(30), }}>
                 <Grid.Col span={6}>
-                    <List size="xl">
-                        {object.descriptionList.map((item, index) => <List.Item key={index}>{item}</List.Item>)}
-                    </List>
+                    <Stack style={{ paddingLeft: '10%' }} >
+                        {object.descriptionList.map((item:any) => (
+                            <>
+                                <Title order={4}>{item.title}</Title>
+                                <Text>{item.description}</Text>
+                            </>
+                        ))}
+                    </Stack>
                 </Grid.Col>
                 <Grid.Col span={6}>
-                    <Stack>
+                    <Stack align='center' gap={30}>
                         {serviceImages?.map((item: { url: any; }, index: React.Key | null | undefined) =>
                             <Image
                                 key={index}
                                 radius="md"
                                 src={item.url}
-                                h={10}
+                                style={{ width: '70%', boxShadow: '0 0 20px rgba(0, 0, 0, 0.75)' }}
                             />)}
                     </Stack>
                 </Grid.Col>

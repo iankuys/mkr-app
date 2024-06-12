@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { ContactUs } from '@/components/Contact/ContactUs';
-import { HeaderMenu } from '@/components/Header/HeaderMenu';
 
 export default function ContactPage() {
   return (

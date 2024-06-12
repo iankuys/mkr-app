@@ -31,8 +31,8 @@ export const headerMenuLinks = [
         link: '#',
         label: 'Our Services',
         links: [
-            { link: '/services/Consultaion&Advisory', label: 'Consultaion & Advisory' },
-            { link: '/services/ProfessionalDesign', label: 'ProfessionalDesign' },
+            { link: '/services/Consultation&Advisory', label: 'Consultation & Advisory' },
+            { link: '/services/ProfessionalDesign', label: 'Professional Design' },
         ],
     },
     { link: '/gallery', label: 'Gallery' },
@@ -50,42 +50,85 @@ export const headerMenuLinks = [
 export const cageHouses: productRawObject = {
     title: 'Cage Houses',
     description: 'Cage houses are designed to provide a comfortable environment for the birds, while also ensuring that the eggs are kept clean and safe. The cages are made of high-quality materials that are easy to clean and maintain, and are designed to provide the birds with plenty of space to move around and exercise.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/CAGE HOUSE/inside1.jpg',
+        'MKR-Gallery/CAGE HOUSE/inside2.jpg',
+        'MKR-Gallery/CAGE HOUSE/inside3.jpg'
+    ]
 };
 
 export const litterFloor: productRawObject = {
     title: 'Litter/Floor System House',
     description: 'Specific practices that must be followed to properly maintain the litter and maximize the health and productivity of the flocks raised on it.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5110.JPG', 
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5113.JPG',
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5115.JPG',
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5121.JPG',
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5124.JPG',
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5125.JPG',
+        'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5127.JPG',
+    ]
 };
 export const elevatedHouse: productRawObject = {
     title: 'Elevated House',
     description: 'Slatted floor system gives you all the benefits of mechanized manure handling without the problems. Hassle free for daily operation of machinery.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/inside1.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/inside2.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/inside3.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/inside4.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/outside1.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/outside2.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/outside3.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/outside4.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/roof.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/roof2.jpg',
+        'MKR-Gallery/ELEVATED HOUSE/PKPS/tank.jpg',
+    ]
 };
 
 export const multiLevelHouse: productRawObject = {
     title: 'Multi-Level House',
     description: 'An economic conversion in existing houses while utilizing the space and increase level of production.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/DOUBLE STOREY/outside.jpg', 
+        'MKR-Gallery/DOUBLE STOREY/outside2.jpg',
+        'MKR-Gallery/DOUBLE STOREY/outside3.jpg',
+    ]
 };
 
 export const hatchery: productRawObject = {
     title: 'Hatchery',
     description: 'Hatchery is a place where eggs are hatched under artificial conditions, especially those of poultry or fish.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/HATCHERY/CP KLUANG/warehouse_corner.jpeg', 
+        'MKR-Gallery/HATCHERY/CP KLUANG/warehouse_front.jpeg', 
+        'MKR-Gallery/HATCHERY/GREAT HARVEST/warehouse_corner.jpeg', 
+        'MKR-Gallery/HATCHERY/GREAT HARVEST/warehouse_front.jpeg', 
+    ]
 };
 
 export const processingPlant: productRawObject = {
     title: 'Processing Plant',
     description: 'Processing plant is a facility where raw materials are processed into finished products.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/FERMENTATION PLANT/plant_front.JPG', 
+        'MKR-Gallery/FERMENTATION PLANT/plant_in.JPG',
+        'MKR-Gallery/FERMENTATION PLANT/plant_tank.JPG',
+        'MKR-Gallery/FERMENTATION PLANT/plant_tank2.JPG',
+    ]
 };
 
 export const fermentationPlant: productRawObject = {
     title: 'Fermentation Plant',
     description: 'Fermentation plant is a facility where raw materials are processed into finished products.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/FERMENTATION PLANT/plant_front.JPG', 
+        'MKR-Gallery/FERMENTATION PLANT/plant_in.JPG',
+        'MKR-Gallery/FERMENTATION PLANT/plant_tank.JPG',
+        'MKR-Gallery/FERMENTATION PLANT/plant_tank2.JPG',
+    ]
 };
 
 export const feedmill: productRawObject = {
@@ -97,25 +140,52 @@ export const feedmill: productRawObject = {
 export const piggeries: productRawObject = {
     title: 'Piggeries',
     description: 'Piggeries is a facility where raw materials are processed into finished products.',
-    s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
+    s3keys: [
+        'MKR-Gallery/SWINE/CHAU YANG/swine_house.jpg', 
+        'MKR-Gallery/SWINE/CHAU YANG/swine_house2.jpg',
+        'MKR-Gallery/SWINE/CHAU YANG/swine_inside.jpg',
+        'MKR-Gallery/SWINE/CHAU YANG/swine_inside2.jpg',
+    ]
 };
 
 export const consultationAdvisory = {
-    title: 'Consultaion & Advisory',
+    title: 'Consultation & Advisory',
     descriptionList: [
-        'Provide professional advice on local authority requirements and regulations.',
-        'Provide technical advice and feasibility recommendations based on site location, ground condition, weather condition.',
-        'Provide option studies on the most efficient farm layout to achieve maximum land utilization and production.',    ],
+        {
+            title: 'Provide professional advice on local authority requirements and regulations.',
+            description: 'Our team of experts will guide you through the complex landscape of local authority requirements and regulations, ensuring that your project meets all necessary standards.'
+        },
+        {
+            title: 'Provide technical advice and feasibility recommendations based on site location, ground condition, weather condition.',
+            description: 'Our experienced professionals will analyze your site location, ground condition, and weather condition to provide you with technical advice and feasibility recommendations, helping you make informed decisions.'
+        },
+        {
+            title: 'Provide option studies on the most efficient farm layout to achieve maximum land utilization and production.',
+            description: 'We will conduct option studies to determine the most efficient farm layout that maximizes land utilization and production, optimizing your resources and increasing your productivity.'
+        },
+    ],
     s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
 };
 
 export const professionalDesign = {
     title: 'Professional Design',
     descriptionList: [
-        'Team of engineers led by an experienced qualified professional engineer.',
-        'Design aimed for easy shipping & easy on-site installation.',
-        'Economical design while maintaining the highest quality of the product. Team of experienced QC to ensure quality assurance and error-free fabrication.',
-        'Environmentally friendly design to ensure minimal material wastage and energy consumption.',
+        {
+            title: 'Team of engineers led by an experienced qualified professional engineer.',
+            description: 'Our team of engineers, led by an experienced qualified professional engineer, will ensure that your project is designed to the highest standards, meeting all technical requirements.'
+        },
+        {
+            title: 'Design aimed for easy shipping & easy on-site installation.',
+            description: 'We prioritize easy shipping and on-site installation in our design process, ensuring that your project can be seamlessly transported and installed without any complications.'
+        },
+        {
+            title: 'Economical design while maintaining the highest quality of the product. Team of experienced QC to ensure quality assurance and error-free fabrication.',
+            description: 'We strive for an economical design that doesn\'t compromise on quality. Our team of experienced quality control professionals ensures that every fabrication process is error-free and meets the highest standards.'
+        },
+        {
+            title: 'Environmentally friendly design to ensure minimal material wastage and energy consumption.',
+            description: 'We prioritize environmentally friendly design practices to minimize material wastage and energy consumption, contributing to a sustainable and eco-friendly project.'
+        },
     ],
     s3keys: ['MKR-Gallery/fan.jpg', 'MKR-Gallery/houses.jpg']
 };
@@ -214,6 +284,7 @@ export const productsCardDescriptions: productCard[] = [
     },
 
 ]
+
 
 // export const productsPageDescriptionSample: productDescription =
 // {

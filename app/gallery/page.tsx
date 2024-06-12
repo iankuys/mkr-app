@@ -61,8 +61,8 @@ export default function page() {
   }
   return (
     <>
-      <Center h={100} bg="var(--mantine-color-gray-light)">
-        <Box><Title order={3}>MKR Gallery</Title></Box>
+      <Center h={120} bg="var(--mantine-color-gray-light)">
+        <Box><Title order={1}>MKR Gallery</Title></Box>
       </Center>
       <ImageCards />
     </>

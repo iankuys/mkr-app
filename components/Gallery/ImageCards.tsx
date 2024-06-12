@@ -15,7 +15,7 @@ const ImageComponent: React.FC<imageGalleryObject> = ({ url, title, link }) => (
                 src={url}
             />
             <Paper className="overlay">
-                <Text size="lg">{title}</Text>
+                <Text size="lg" style={{ color: 'white'}}>{title}</Text>
             </Paper>
         </div>
     </a>

@@ -3,10 +3,6 @@
 import React from 'react';
 import { Card, Container, Paper, Text, Title, Center, Grid } from '@mantine/core';
 
-interface NewsPageProps {
-    news: string[];
-}
-
 const sampleNews = [
     {
         title: 'News 1',
@@ -18,7 +14,7 @@ const sampleNews = [
     }
 ]
 
-const NewsPage: React.FC<NewsPageProps> = ({ news }) => {
+const SeminarPage = ({ }) => {
     return (
         <>
             <Center h={120} bg="var(--mantine-color-gray-light)">
@@ -50,4 +46,4 @@ const NewsPage: React.FC<NewsPageProps> = ({ news }) => {
     );
 };
 
-export default NewsPage;
+export default SeminarPage;

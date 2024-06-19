@@ -7,6 +7,7 @@ import { aboutObject } from '@/src/types';
 import { useState, useEffect } from 'react';
 import { aboutPageData } from '@/src/data';
 import { fetchURL } from '@/src/helper';
+import NextBreadcrumbs from '@/components/BreadCrumbs/NextBreadcrumbs';
 
 export default function page() {
   const [aboutObjects, setAboutObjects] = useState<aboutObject[]>([])
@@ -48,6 +49,7 @@ export default function page() {
       <Center h={120} bg="var(--mantine-color-gray-light)">
         <Title order={1} >About Us</Title>
       </Center>
+      <NextBreadcrumbs />
       <div className={classes.background}>
         <Overlay
           gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"

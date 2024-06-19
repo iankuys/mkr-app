@@ -4,6 +4,7 @@ import { productRawObject, productCard, carouselImageObject } from '@/src/types'
 import { CardsCarousel } from '../Carousel/Carousel';
 import { fetchURL } from '@/src/helper';
 import { rem } from '@mantine/core';
+import NextBreadcrumbs from '../BreadCrumbs/NextBreadcrumbs';
 
 export default function ProductDescription({ object }: { object: productRawObject }) {
 
@@ -33,6 +34,7 @@ export default function ProductDescription({ object }: { object: productRawObjec
           {object.title}
         </Title>
       </Center>
+      <NextBreadcrumbs />
       <Grid justify="center" py="1rem" style={{ margin: rem(30), }}>
         <Grid.Col span={6}>
           <Center style={{ paddingLeft: '10%' }}>

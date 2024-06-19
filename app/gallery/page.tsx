@@ -8,6 +8,7 @@ import { keyObject, imageGalleryObject } from '@/src/types';
 import { getUrlResult } from '@/src/helper';
 import { galleryObjects } from '@/src/data';
 import ImageCards from '@/components/Gallery/ImageCards';
+import NextBreadcrumbs from '@/components/BreadCrumbs/NextBreadcrumbs';
 
 export default function page() {
 
@@ -64,6 +65,7 @@ export default function page() {
       <Center h={120} bg="var(--mantine-color-gray-light)">
         <Box><Title order={1}>MKR Gallery</Title></Box>
       </Center>
+      <NextBreadcrumbs />
       <ImageCards />
     </>
   )

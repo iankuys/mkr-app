@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Card, Container, Paper, Text, Title, Center, Grid } from '@mantine/core';
+import NextBreadcrumbs from '@/components/BreadCrumbs/NextBreadcrumbs';
 
 const sampleNews = [
     {
@@ -22,6 +23,7 @@ const SeminarPage = ({ }) => {
                     Seminar
                 </Title>
             </Center>
+            <NextBreadcrumbs />
             <Grid style={{marginBlock: '2%', paddingInline: '1%'}}>
                 {sampleNews.map((item, index) => (
                     <Grid.Col span={3}>

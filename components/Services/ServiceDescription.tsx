@@ -3,6 +3,7 @@ import { Center, Grid, List, Image, Stack, Title, Card, rem, Text } from '@manti
 import { serviceRawObject } from '@/src/types';
 import { CardsCarousel } from '../Carousel/Carousel';
 import { fetchURL } from '@/src/helper';
+import NextBreadcrumbs from '../BreadCrumbs/NextBreadcrumbs';
 
 export default function ServiceDescription({ object }: { object: any }) {
 
@@ -32,6 +33,7 @@ export default function ServiceDescription({ object }: { object: any }) {
                     {object.title}
                 </Title>
             </Center>
+            <NextBreadcrumbs />
             <Grid justify="center" py="1rem" style={{ margin: rem(30), }}>
                 <Grid.Col span={6}>
                     <Stack style={{ paddingLeft: '10%' }} >

@@ -218,42 +218,60 @@ export const aboutPageData = [
     }
 ]
 
-export const carouselkeys: keyObject[] = [
+export const galleryObjects: keyObject[] = [
     {
         s3key:
-            'MKR-Gallery/constuction-3.jpg',
-        title: 'Best forests to visit in North America',
-        link: '/products'
+            'MKR-Gallery/FLOOR SYSTEM HOUSE/IMG_5110.JPG',
+        title: 'Floor System House',
+        link: '/products/FloorSystemHouse'
+    },
+    {
+        s3key:
+            'MKR-Gallery/HATCHERY/CP KLUANG/warehouse_corner.jpeg',
+        title: 'Hatchery',
+        link: '/products/Hatchery'
+    },
+    {
+        s3key:
+            'MKR-Gallery/FERMENTATION PLANT/plant_front.JPG',
+        title: 'Fermentation Plant',
+        link: '/products/FermentationPlant'
+    },
+    {
+        s3key:
+            'MKR-Gallery/SWINE/CHAU YANG/swine_house.jpg',
+        title: 'Piggeries',
+        link: '/products/Piggeries'
+    },
+    {
+        s3key:
+            'MKR-Gallery/ELEVATED HOUSE/PKPS/inside1.jpg',
+        title: 'Elevated House',
+        link: '/products/ElevatedHouse'
+    },
+    {
+        s3key:
+            'MKR-Gallery/CAGE HOUSE/inside1.jpg',
+        title: 'Cage Houses',
+        link: '/products/CageHouses'
+    },
+    {
+        s3key:
+            'MKR-Gallery/DOUBLE STOREY/outside.jpg',
+        title: 'Multi-Level House',
+        link: '/products/MultiLevelHouse'
+    },
+    {
+        s3key:
+            'MKR-Gallery/FERMENTATION PLANT/plant_in.JPG',
+        title: 'Processing Plant',
+        link: '/products/ProcessingPlant'
     },
     {
         s3key:
             'MKR-Gallery/fan.jpg',
-        title: 'Hawaii beaches review: better than you think',
-        link: '/products'
-    },
-    {
-        s3key:
-            'MKR-Gallery/houses-2.jpg',
-        title: 'Mountains at night: 12 best locations to enjoy the view',
-        link: '/products'
-    },
-    {
-        s3key:
-            'MKR-Gallery/interior.jpg',
-        title: 'Aurora in Norway: when to visit for best experience',
-        link: '/products'
-    },
-    {
-        s3key:
-            'MKR-Gallery/steel.jpg',
-        title: 'Best places to visit this winter',
-        link: '/products'
-    },
-    {
-        s3key:
-            'MKR-Gallery/sideview.jpg',
-        title: 'Active volcanos reviews: travel at your own risk',
-        link: '/products'
+        title: 'Feedmill',
+        link: '/products/Feedmill'
     },
 ];
 

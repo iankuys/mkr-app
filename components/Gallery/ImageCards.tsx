@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Paper, Text, Image } from '@mantine/core';
 import './Gallery.css'; // import your css
 import { imageGalleryObject } from '@/src/types';
-import { carouselkeys } from '@/src/data';
+import { galleryObjects } from '@/src/data';
 import { useState, useEffect } from 'react';
 import { getUrlResult } from '@/src/helper';
 
@@ -33,7 +33,7 @@ const ImageCards: React.FC = () => {
         const newImageObjects: imageGalleryObject[] = [];
 
         await Promise.all(
-            carouselkeys.map(async (object) => {
+            galleryObjects.map(async (object) => {
                 try {
                     const response = await getUrlResult(object.s3key);
 

@@ -8,7 +8,7 @@ import { FooterLinks } from '@/components/Footer/FooterBar';
 import ContentCard from '@/components/Home/ContentCard';
 import { HeroContentLeft } from '@/components/Home/HeroContent';
 import { CardsCarousel } from '@/components/Carousel/Carousel';
-import { carouselkeys, productsCardDescriptions } from '@/src/data';
+import { galleryObjects, productsCardDescriptions } from '@/src/data';
 
 export default function HomePage() {
   return (

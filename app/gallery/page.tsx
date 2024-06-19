@@ -6,7 +6,7 @@ import { useHover } from '@mantine/hooks';
 import { useState, useEffect } from 'react';
 import { keyObject, imageGalleryObject } from '@/src/types';
 import { getUrlResult } from '@/src/helper';
-import { carouselkeys } from '@/src/data';
+import { galleryObjects } from '@/src/data';
 import ImageCards from '@/components/Gallery/ImageCards';
 
 export default function page() {
@@ -37,7 +37,7 @@ export default function page() {
     const newImageObjects: imageGalleryObject[] = [];
 
     await Promise.all(
-      carouselkeys.map(async (object) => {
+      galleryObjects.map(async (object) => {
         try {
           const response = await getUrlResult(object.s3key);
 
